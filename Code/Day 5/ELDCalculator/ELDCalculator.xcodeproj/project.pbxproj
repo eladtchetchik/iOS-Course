@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F24D3EAE1B77144200C5BEF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F24D3EAD1B77144200C5BEF2 /* main.m */; };
+		F24D3EB11B77144200C5BEF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F24D3EB01B77144200C5BEF2 /* AppDelegate.m */; };
+		F24D3EB41B77144200C5BEF2 /* ELDCalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F24D3EB21B77144200C5BEF2 /* ELDCalculator.xcdatamodeld */; };
+		F24D3EB71B77144200C5BEF2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24D3EB61B77144200C5BEF2 /* ViewController.m */; };
+		F24D3EBA1B77144200C5BEF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F24D3EB81B77144200C5BEF2 /* Main.storyboard */; };
+		F24D3EBC1B77144200C5BEF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F24D3EBB1B77144200C5BEF2 /* Images.xcassets */; };
+		F24D3EBF1B77144200C5BEF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F24D3EBD1B77144200C5BEF2 /* LaunchScreen.xib */; };
+		F24D3ECB1B77144200C5BEF2 /* ELDCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F24D3ECA1B77144200C5BEF2 /* ELDCalculatorTests.m */; };
+		F24D3ED91B77159800C5BEF2 /* ELDCalculation.m in Sources */ = {isa = PBXBuildFile; fileRef = F24D3ED81B77159800C5BEF2 /* ELDCalculation.m */; };
+		F24D3EDC1B77170D00C5BEF2 /* ELDBaseOperand.m in Sources */ = {isa = PBXBuildFile; fileRef = F24D3EDB1B77170D00C5BEF2 /* ELDBaseOperand.m */; };
+		F24D3EE11B77407100C5BEF2 /* ELDAddOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = F24D3EE01B77407100C5BEF2 /* ELDAddOperator.m */; };
+		F24D3EE41B7740BB00C5BEF2 /* ELDSingleArgumentOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = F24D3EE31B7740BB00C5BEF2 /* ELDSingleArgumentOperator.m */; };
+		F24D3EE71B774F2A00C5BEF2 /* ELDDoubleArgumentOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = F24D3EE61B774F2A00C5BEF2 /* ELDDoubleArgumentOperator.m */; };
+		F24D3EEA1B777B6100C5BEF2 /* ELDSubtractOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = F24D3EE91B777B6100C5BEF2 /* ELDSubtractOperator.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F24D3EC51B77144200C5BEF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F24D3EA01B77144200C5BEF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F24D3EA71B77144200C5BEF2;
+			remoteInfo = ELDCalculator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F24D3EA81B77144200C5BEF2 /* ELDCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ELDCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F24D3EAC1B77144200C5BEF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F24D3EAD1B77144200C5BEF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F24D3EAF1B77144200C5BEF2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F24D3EB01B77144200C5BEF2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F24D3EB31B77144200C5BEF2 /* ELDCalculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ELDCalculator.xcdatamodel; sourceTree = "<group>"; };
+		F24D3EB51B77144200C5BEF2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F24D3EB61B77144200C5BEF2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F24D3EB91B77144200C5BEF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F24D3EBB1B77144200C5BEF2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F24D3EBE1B77144200C5BEF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F24D3EC41B77144200C5BEF2 /* ELDCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ELDCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F24D3EC91B77144200C5BEF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F24D3ECA1B77144200C5BEF2 /* ELDCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELDCalculatorTests.m; sourceTree = "<group>"; };
+		F24D3ED71B77159800C5BEF2 /* ELDCalculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELDCalculation.h; path = Model/ELDCalculation.h; sourceTree = "<group>"; };
+		F24D3ED81B77159800C5BEF2 /* ELDCalculation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELDCalculation.m; path = Model/ELDCalculation.m; sourceTree = "<group>"; };
+		F24D3EDA1B77160900C5BEF2 /* ELDBaseOperand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELDBaseOperand.h; path = Model/ELDBaseOperand.h; sourceTree = "<group>"; };
+		F24D3EDB1B77170D00C5BEF2 /* ELDBaseOperand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELDBaseOperand.m; path = Model/ELDBaseOperand.m; sourceTree = "<group>"; };
+		F24D3EDE1B77353B00C5BEF2 /* ELDCalculating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELDCalculating.h; sourceTree = "<group>"; };
+		F24D3EDF1B77407100C5BEF2 /* ELDAddOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELDAddOperator.h; path = Model/Operators/ELDAddOperator.h; sourceTree = "<group>"; };
+		F24D3EE01B77407100C5BEF2 /* ELDAddOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELDAddOperator.m; path = Model/Operators/ELDAddOperator.m; sourceTree = "<group>"; };
+		F24D3EE21B7740BB00C5BEF2 /* ELDSingleArgumentOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELDSingleArgumentOperator.h; path = Model/Operators/ELDSingleArgumentOperator.h; sourceTree = "<group>"; };
+		F24D3EE31B7740BB00C5BEF2 /* ELDSingleArgumentOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELDSingleArgumentOperator.m; path = Model/Operators/ELDSingleArgumentOperator.m; sourceTree = "<group>"; };
+		F24D3EE51B774F2A00C5BEF2 /* ELDDoubleArgumentOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELDDoubleArgumentOperator.h; path = Model/Operators/ELDDoubleArgumentOperator.h; sourceTree = "<group>"; };
+		F24D3EE61B774F2A00C5BEF2 /* ELDDoubleArgumentOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELDDoubleArgumentOperator.m; path = Model/Operators/ELDDoubleArgumentOperator.m; sourceTree = "<group>"; };
+		F24D3EE81B777B6100C5BEF2 /* ELDSubtractOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELDSubtractOperator.h; path = Model/Operators/ELDSubtractOperator.h; sourceTree = "<group>"; };
+		F24D3EE91B777B6100C5BEF2 /* ELDSubtractOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELDSubtractOperator.m; path = Model/Operators/ELDSubtractOperator.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F24D3EA51B77144200C5BEF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24D3EC11B77144200C5BEF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F24D3E9F1B77144200C5BEF2 = {
+			isa = PBXGroup;
+			children = (
+				F24D3EAA1B77144200C5BEF2 /* ELDCalculator */,
+				F24D3EC71B77144200C5BEF2 /* ELDCalculatorTests */,
+				F24D3EA91B77144200C5BEF2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F24D3EA91B77144200C5BEF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F24D3EA81B77144200C5BEF2 /* ELDCalculator.app */,
+				F24D3EC41B77144200C5BEF2 /* ELDCalculatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F24D3EAA1B77144200C5BEF2 /* ELDCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				F24D3ED61B77145700C5BEF2 /* Model */,
+				F24D3ED51B77144E00C5BEF2 /* Controllers */,
+				F24D3ED41B77144700C5BEF2 /* App Delegate */,
+				F24D3EAF1B77144200C5BEF2 /* AppDelegate.h */,
+				F24D3EB01B77144200C5BEF2 /* AppDelegate.m */,
+				F24D3EB51B77144200C5BEF2 /* ViewController.h */,
+				F24D3EB61B77144200C5BEF2 /* ViewController.m */,
+				F24D3EB81B77144200C5BEF2 /* Main.storyboard */,
+				F24D3EBB1B77144200C5BEF2 /* Images.xcassets */,
+				F24D3EBD1B77144200C5BEF2 /* LaunchScreen.xib */,
+				F24D3EB21B77144200C5BEF2 /* ELDCalculator.xcdatamodeld */,
+				F24D3EAB1B77144200C5BEF2 /* Supporting Files */,
+			);
+			path = ELDCalculator;
+			sourceTree = "<group>";
+		};
+		F24D3EAB1B77144200C5BEF2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F24D3EAC1B77144200C5BEF2 /* Info.plist */,
+				F24D3EAD1B77144200C5BEF2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F24D3EC71B77144200C5BEF2 /* ELDCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				F24D3ECA1B77144200C5BEF2 /* ELDCalculatorTests.m */,
+				F24D3EC81B77144200C5BEF2 /* Supporting Files */,
+			);
+			path = ELDCalculatorTests;
+			sourceTree = "<group>";
+		};
+		F24D3EC81B77144200C5BEF2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F24D3EC91B77144200C5BEF2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F24D3ED41B77144700C5BEF2 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		F24D3ED51B77144E00C5BEF2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F24D3ED61B77145700C5BEF2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F24D3ED71B77159800C5BEF2 /* ELDCalculation.h */,
+				F24D3ED81B77159800C5BEF2 /* ELDCalculation.m */,
+				F24D3EDA1B77160900C5BEF2 /* ELDBaseOperand.h */,
+				F24D3EDB1B77170D00C5BEF2 /* ELDBaseOperand.m */,
+				F24D3EDE1B77353B00C5BEF2 /* ELDCalculating.h */,
+				F24D3EDF1B77407100C5BEF2 /* ELDAddOperator.h */,
+				F24D3EE01B77407100C5BEF2 /* ELDAddOperator.m */,
+				F24D3EE21B7740BB00C5BEF2 /* ELDSingleArgumentOperator.h */,
+				F24D3EE31B7740BB00C5BEF2 /* ELDSingleArgumentOperator.m */,
+				F24D3EE51B774F2A00C5BEF2 /* ELDDoubleArgumentOperator.h */,
+				F24D3EE61B774F2A00C5BEF2 /* ELDDoubleArgumentOperator.m */,
+				F24D3EE81B777B6100C5BEF2 /* ELDSubtractOperator.h */,
+				F24D3EE91B777B6100C5BEF2 /* ELDSubtractOperator.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F24D3EA71B77144200C5BEF2 /* ELDCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F24D3ECE1B77144200C5BEF2 /* Build configuration list for PBXNativeTarget "ELDCalculator" */;
+			buildPhases = (
+				F24D3EA41B77144200C5BEF2 /* Sources */,
+				F24D3EA51B77144200C5BEF2 /* Frameworks */,
+				F24D3EA61B77144200C5BEF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ELDCalculator;
+			productName = ELDCalculator;
+			productReference = F24D3EA81B77144200C5BEF2 /* ELDCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F24D3EC31B77144200C5BEF2 /* ELDCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F24D3ED11B77144200C5BEF2 /* Build configuration list for PBXNativeTarget "ELDCalculatorTests" */;
+			buildPhases = (
+				F24D3EC01B77144200C5BEF2 /* Sources */,
+				F24D3EC11B77144200C5BEF2 /* Frameworks */,
+				F24D3EC21B77144200C5BEF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F24D3EC61B77144200C5BEF2 /* PBXTargetDependency */,
+			);
+			name = ELDCalculatorTests;
+			productName = ELDCalculatorTests;
+			productReference = F24D3EC41B77144200C5BEF2 /* ELDCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F24D3EA01B77144200C5BEF2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = za.co.elad;
+				TargetAttributes = {
+					F24D3EA71B77144200C5BEF2 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					F24D3EC31B77144200C5BEF2 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = F24D3EA71B77144200C5BEF2;
+					};
+				};
+			};
+			buildConfigurationList = F24D3EA31B77144200C5BEF2 /* Build configuration list for PBXProject "ELDCalculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F24D3E9F1B77144200C5BEF2;
+			productRefGroup = F24D3EA91B77144200C5BEF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F24D3EA71B77144200C5BEF2 /* ELDCalculator */,
+				F24D3EC31B77144200C5BEF2 /* ELDCalculatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F24D3EA61B77144200C5BEF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24D3EBA1B77144200C5BEF2 /* Main.storyboard in Resources */,
+				F24D3EBF1B77144200C5BEF2 /* LaunchScreen.xib in Resources */,
+				F24D3EBC1B77144200C5BEF2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24D3EC21B77144200C5BEF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F24D3EA41B77144200C5BEF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24D3EE41B7740BB00C5BEF2 /* ELDSingleArgumentOperator.m in Sources */,
+				F24D3EB11B77144200C5BEF2 /* AppDelegate.m in Sources */,
+				F24D3EAE1B77144200C5BEF2 /* main.m in Sources */,
+				F24D3EEA1B777B6100C5BEF2 /* ELDSubtractOperator.m in Sources */,
+				F24D3EB71B77144200C5BEF2 /* ViewController.m in Sources */,
+				F24D3EE71B774F2A00C5BEF2 /* ELDDoubleArgumentOperator.m in Sources */,
+				F24D3ED91B77159800C5BEF2 /* ELDCalculation.m in Sources */,
+				F24D3EB41B77144200C5BEF2 /* ELDCalculator.xcdatamodeld in Sources */,
+				F24D3EDC1B77170D00C5BEF2 /* ELDBaseOperand.m in Sources */,
+				F24D3EE11B77407100C5BEF2 /* ELDAddOperator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24D3EC01B77144200C5BEF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24D3ECB1B77144200C5BEF2 /* ELDCalculatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F24D3EC61B77144200C5BEF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F24D3EA71B77144200C5BEF2 /* ELDCalculator */;
+			targetProxy = F24D3EC51B77144200C5BEF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F24D3EB81B77144200C5BEF2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F24D3EB91B77144200C5BEF2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F24D3EBD1B77144200C5BEF2 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F24D3EBE1B77144200C5BEF2 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F24D3ECC1B77144200C5BEF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F24D3ECD1B77144200C5BEF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F24D3ECF1B77144200C5BEF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ELDCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F24D3ED01B77144200C5BEF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ELDCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F24D3ED21B77144200C5BEF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ELDCalculatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ELDCalculator.app/ELDCalculator";
+			};
+			name = Debug;
+		};
+		F24D3ED31B77144200C5BEF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ELDCalculatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ELDCalculator.app/ELDCalculator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F24D3EA31B77144200C5BEF2 /* Build configuration list for PBXProject "ELDCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F24D3ECC1B77144200C5BEF2 /* Debug */,
+				F24D3ECD1B77144200C5BEF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F24D3ECE1B77144200C5BEF2 /* Build configuration list for PBXNativeTarget "ELDCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F24D3ECF1B77144200C5BEF2 /* Debug */,
+				F24D3ED01B77144200C5BEF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F24D3ED11B77144200C5BEF2 /* Build configuration list for PBXNativeTarget "ELDCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F24D3ED21B77144200C5BEF2 /* Debug */,
+				F24D3ED31B77144200C5BEF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F24D3EB21B77144200C5BEF2 /* ELDCalculator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F24D3EB31B77144200C5BEF2 /* ELDCalculator.xcdatamodel */,
+			);
+			currentVersion = F24D3EB31B77144200C5BEF2 /* ELDCalculator.xcdatamodel */;
+			path = ELDCalculator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F24D3EA01B77144200C5BEF2 /* Project object */;
+}
