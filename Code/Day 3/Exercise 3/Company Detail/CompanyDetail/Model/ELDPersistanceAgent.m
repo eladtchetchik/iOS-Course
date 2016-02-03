@@ -1,0 +1,221 @@
+//
+//  ELDPersistanceAgent.m
+//  CompanyDetail
+//
+//  Created by Elad Tchetchik on 7/19/15.
+//  Copyright (c) 2015 za.co.elad. All rights reserved.
+//
+
+#import "ELDPersistanceAgent.h"
+#import "ELDDummyPersistanceAgent.h"
+
+static ELDPersistanceAgent* __ELDPersistanceAgent;
+
+@interface ELDPersistanceAgent()
+
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+- (void)saveContext;
+- (NSURL *)applicationDocumentsDirectory;
+
+@end
+
+@implementation ELDPersistanceAgent
+
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize managedObjectModel = _managedObjectModel;
+@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
+
++ (ELDPersistanceAgent*)sharedInstance
+    {
+    if (__ELDPersistanceAgent == nil)
+        {
+        __ELDPersistanceAgent = [ELDPersistanceAgent new];
+        [__ELDPersistanceAgent managedObjectContext];
+        [__ELDPersistanceAgent createDummyData];
+        }
+    return (__ELDPersistanceAgent);
+    }
+
+- (NSURL *)applicationDocumentsDirectory
+    {
+    // The directory the application uses to store the Core Data store file. This code uses a directory named "com.tchetchik.elad.CompanyDetail" in the application's documents directory.
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    }
+
+- (NSManagedObjectModel *)managedObjectModel
+    {
+    // The managed object model for the application. It is a fatal error for the application not to be able to find and load its model.
+    if (_managedObjectModel != nil)
+        {
+        return _managedObjectModel;
+        }
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"CompanyDetail" withExtension:@"momd"];
+    _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    return _managedObjectModel;
+    }
+
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
+    // The persistent store coordinator for the application. This implementation creates and return a coordinator, having added the store for the application to it.
+    if (_persistentStoreCoordinator != nil) {
+        return _persistentStoreCoordinator;
+    }
+    
+    // Create the coordinator and store
+    
+    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CompanyDetail.sqlite"];
+    NSError *error = nil;
+    NSString *failureReason = @"There was an error creating or loading the application's saved data.";
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+        // Report any error we got.
+        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+        dict[NSLocalizedDescriptionKey] = @"Failed to initialize the application's saved data";
+        dict[NSLocalizedFailureReasonErrorKey] = failureReason;
+        dict[NSUnderlyingErrorKey] = error;
+        error = [NSError errorWithDomain:@"YOUR_ERROR_DOMAIN" code:9999 userInfo:dict];
+        // Replace this with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    return _persistentStoreCoordinator;
+}
+
+
+- (NSManagedObjectContext *)managedObjectContext {
+    // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.)
+    if (_managedObjectContext != nil) {
+        return _managedObjectContext;
+    }
+    
+    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+    if (!coordinator) {
+        return nil;
+    }
+    _managedObjectContext = [[NSManagedObjectContext alloc] init];
+    [_managedObjectContext setPersistentStoreCoordinator:coordinator];
+    return _managedObjectContext;
+}
+
+#pragma mark - Core Data Saving support
+
+- (void)save
+    {
+    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
+    if (managedObjectContext != nil) {
+        NSError *error = nil;
+        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error])
+            {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+            }
+        }
+    }
+
+#pragma mark - Insertions
+
+- (id) createLazyEmployee
+    {
+    NSManagedObject* employee;
+    
+    employee = [NSEntityDescription insertNewObjectForEntityForName:@"LazyEmployee" inManagedObjectContext:_managedObjectContext];
+    return (employee);
+    }
+
+- (id) createDilligentEmployee
+    {
+    NSManagedObject* employee;
+    
+    employee = [NSEntityDescription insertNewObjectForEntityForName:@"DiligentEmployee" inManagedObjectContext:_managedObjectContext];
+    return (employee);
+    }
+
+- (id) createDepartment
+    {
+    NSManagedObject* department;
+
+    department = [NSEntityDescription insertNewObjectForEntityForName:@"Department" inManagedObjectContext:_managedObjectContext];
+    return (department);
+    }
+
+- (id) createPosition
+    {
+    NSManagedObject* position;
+    
+    position = [NSEntityDescription insertNewObjectForEntityForName:@"Position" inManagedObjectContext:_managedObjectContext];
+    return (position);
+    }
+
+
+#pragma mark - Getters
+
+- (NSArray*) allDepartments
+    {
+    NSFetchRequest* fetchRequest;
+    NSArray* fetchResults;
+    NSError* error;
+    
+    error = nil;
+    fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Department"];
+    fetchResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if (error != nil || fetchResults == nil)
+        {
+        NSLog(@"Error fetching departmetns: %@", error);
+        }
+    return fetchResults;
+    }
+
+- (NSArray*) allPositions
+    {
+    NSFetchRequest* fetchRequest;
+    NSArray* fetchResults;
+    NSError* error;
+    
+    error = nil;
+    fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Position"];
+    fetchResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if (error != nil || fetchResults == nil)
+        {
+        NSLog(@"Error fetching positions: %@", error);
+        }
+    return fetchResults;
+    
+    }
+
+- (NSArray*) allEmployees
+    {
+    NSFetchRequest* fetchRequest;
+    NSArray* fetchResults;
+    NSError* error;
+    
+    error = nil;
+    fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Employee"];
+    fetchResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if (error != nil || fetchResults == nil)
+        {
+        NSLog(@"Error fetching employees: %@", error);
+        }
+    return fetchResults;
+    }
+
+
+
+#pragma mark - Dummy Data Creation
+
+- (void) createDummyData
+    {
+    [ELDDummyPersistanceAgent createDummyData];
+    
+    }
+
+
+
+
+@end
