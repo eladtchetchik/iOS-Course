@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Department" representedClassName="ELDDepartment" syncable="YES">
+        <attribute name="emailAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="logoData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="departmentHead" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Employee" syncable="YES"/>
+        <relationship name="employees" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Employee" inverseName="department" inverseEntity="Employee" syncable="YES"/>
+    </entity>
+    <entity name="DiligentEmployee" representedClassName="ELDDilligentEmployee" parentEntity="Employee" syncable="YES"/>
+    <entity name="Employee" representedClassName="ELDEmployee" syncable="YES">
+        <attribute name="firstName" attributeType="String" syncable="YES"/>
+        <attribute name="idNumber" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" attributeType="String" syncable="YES"/>
+        <attribute name="profilePictureData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="department" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Department" inverseName="employees" inverseEntity="Department" syncable="YES"/>
+        <relationship name="position" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Position" syncable="YES"/>
+    </entity>
+    <entity name="LazyEmployee" representedClassName="ELDLazyEmployee" parentEntity="Employee" syncable="YES"/>
+    <entity name="Position" representedClassName="ELDPosition" syncable="YES">
+        <attribute name="lowerEarningBoundary" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="positionDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="positionName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="upperEarningBoundary" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Position" positionX="-4428" positionY="-5085" width="128" height="103"/>
+        <element name="Employee" positionX="-4628" positionY="-5103" width="128" height="133"/>
+        <element name="DiligentEmployee" positionX="-4518" positionY="-4930" width="128" height="43"/>
+        <element name="LazyEmployee" positionX="-4734" positionY="-4921" width="128" height="43"/>
+        <element name="Department" positionX="-4880" positionY="-5121" width="128" height="133"/>
+    </elements>
+</model>
