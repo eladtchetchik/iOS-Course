@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7706"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="TopLeft" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9x6-ol-Z64">
+                    <rect key="frame" x="15" y="15" width="277" height="277"/>
+                    <color key="backgroundColor" red="0.27317085070000002" green="0.16701920840000001" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="14" y="15" width="572" height="277"/>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eeu-kS-XPr">
+                    <rect key="frame" x="15" y="15" width="277" height="277"/>
+                    <color key="backgroundColor" red="0.27317085070000002" green="0.16701920840000001" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                        <rect key="frame" x="308" y="15" width="277" height="277"/>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HjE-MN-4Qs">
+                    <rect key="frame" x="15" y="308" width="277" height="277"/>
+                    <color key="backgroundColor" red="0.27317085070000002" green="0.16701920840000001" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                        <rect key="frame" x="308" y="308" width="277" height="277"/>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G1p-4h-hSr">
+                    <rect key="frame" x="15" y="308" width="277" height="277"/>
+                    <color key="backgroundColor" red="0.27317085070000002" green="0.16701920840000001" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="14" y="300" width="572" height="277"/>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="G1p-4h-hSr" firstAttribute="top" secondItem="9x6-ol-Z64" secondAttribute="bottom" constant="8" id="4Lo-cg-TLz"/>
+                <constraint firstItem="G1p-4h-hSr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="14" id="6Vc-nW-n0T"/>
+                <constraint firstItem="9x6-ol-Z64" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="E19-yO-gKx"/>
+                <constraint firstItem="G1p-4h-hSr" firstAttribute="height" secondItem="9x6-ol-Z64" secondAttribute="height" id="FHo-65-3eZ"/>
+                <constraint firstItem="9x6-ol-Z64" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="14" id="R8U-HU-9qa"/>
+                <constraint firstAttribute="trailing" secondItem="G1p-4h-hSr" secondAttribute="trailing" constant="14" id="TGp-hE-xL2"/>
+                <constraint firstAttribute="bottom" secondItem="G1p-4h-hSr" secondAttribute="bottom" constant="23" id="mo3-fP-MkP"/>
+                <constraint firstItem="G1p-4h-hSr" firstAttribute="width" secondItem="9x6-ol-Z64" secondAttribute="width" id="qnX-bZ-8cO"/>
+                <constraint firstAttribute="trailing" secondItem="9x6-ol-Z64" secondAttribute="trailing" constant="14" id="xbW-fn-sdt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="Eeu-kS-XPr"/>
+                    <exclude reference="HjE-MN-4Qs"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="E19-yO-gKx"/>
+                    <exclude reference="R8U-HU-9qa"/>
+                    <exclude reference="xbW-fn-sdt"/>
+                    <exclude reference="4Lo-cg-TLz"/>
+                    <exclude reference="6Vc-nW-n0T"/>
+                    <exclude reference="FHo-65-3eZ"/>
+                    <exclude reference="TGp-hE-xL2"/>
+                    <exclude reference="mo3-fP-MkP"/>
+                    <exclude reference="qnX-bZ-8cO"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="E19-yO-gKx"/>
+                    <include reference="R8U-HU-9qa"/>
+                    <include reference="xbW-fn-sdt"/>
+                    <include reference="4Lo-cg-TLz"/>
+                    <include reference="6Vc-nW-n0T"/>
+                    <include reference="FHo-65-3eZ"/>
+                    <include reference="TGp-hE-xL2"/>
+                    <include reference="mo3-fP-MkP"/>
+                    <include reference="qnX-bZ-8cO"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=regular">
+                <mask key="subviews">
+                    <include reference="Eeu-kS-XPr"/>
+                    <include reference="HjE-MN-4Qs"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>
